@@ -4,21 +4,40 @@
         <title>
             Profile
         </title>
+        <style>
+            html{
+                scroll-behavior: smooth;
+            }
+            aside{
+                float: right;
+            }
+        </style>
     </head>
     <body>
-        <h1>Shaurya Malhan</h1>
-        <h5>Life is Good!</h5>
+        <header>
+            <h1>Shaurya Malhan</h1>
+            <h5>Life is Good!</h5>
+        </header>
+        <nav>
+            <a href="#cite">Go to cite</a>
+        </nav>
         <figure>
             <img src = "ProfilePic.jpeg" alt = "ProfilePic" height="300" width="220">
             <figcaption>Shaurya Malhan</figcaption>
         </figure>
-        <h3><u>About Me</u></h3>
-        <p>Hey, i love to code. Currently i am doing competitve programming and learning Web Developmennt, i am studying 
-            at IIIT Naya Raipur and passed my 12th from Amity International School, Mayur Vihar.<br> I know a liitle bit of
-            Machine learning. I am a National level chess and archery player, i went 2 times national in archery and 1 time
-            national in chess. I have played a lot of chess and archery tournaments<br> and i have got a 1147 FIDE rating in
-            chess at international level.
-        </p>
+        <section>
+            <h3><u>About Me</u></h3>
+            <p>
+                Hey, i love to code. Currently i am doing competitve programming and learning Web Developmennt, i am studying 
+                at IIIT Naya Raipur and passed my 12th from Amity International School, Mayur Vihar.<br> I know a liitle bit of
+                Machine learning. I am a National level chess and archery player, i went 2 times national in archery and 1 time
+                national in chess. I have played a lot of chess and archery tournaments<br> and i have got a 1147 FIDE rating in
+                chess at international level.
+            </p>
+        </section>
+        <aside>
+            This Data will be printed at the side using CSS
+        </aside>
         <h3><u>Achievments</u></h3>
         <ul>
             <li>1 times Chess National</li>
@@ -31,7 +50,7 @@
             Words can be like X-rays,<br> if you use them properly—they’ll<br> go through anything.<br>
                 You read and you’re pierced.
                 <br><br>
-                <cite>
+                <cite id="cite">
                     ~Shaurya Malhan
                     <a href="https://www.thecodehelp.in" target="_blank">The code help</a>
                 </cite>
