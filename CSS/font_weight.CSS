@@ -1,0 +1,17 @@
+/* Set paragraph text to be bold. */
+p {
+    font-weight: bold;
+  }
+  
+  /* Set div text to two steps heavier than
+     normal but less than a standard bold. */
+  div {
+    font-weight: 600;
+  }
+  
+  /* Set span text to be one step lighter
+     than its parent. */
+  span {
+    font-weight: lighter;
+  }
+  
