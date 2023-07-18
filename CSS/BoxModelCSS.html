@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Padding increases box size so to prevent it we add box sizing-->
+    <style>
+        .box{
+            height: 100px;
+            width: 200px;
+            border: 1px solid black;
+            margin: 10px;
+            padding: 50px;
+            box-sizing: border-box;
+        }
+        #org{
+            background-color: orange;
+        }
+        #wsd{
+            background-color: aqua;
+        }
+        #grn{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="org">Lorem ipsum dolor sit amet.</div>
+    <div class="box" id="wsd">Lorem ipsum dolor sit amet.</div>
+    <div class="box" id="grn">Lorem ipsum dolor sit amet.</div>
+</body>
+</html>

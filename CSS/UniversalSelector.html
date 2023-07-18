@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * [lang^="en"] {
+            color: green;
+        }
+
+        *.warning {
+            color: red;
+        }
+
+        *#maincontent {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <p class="warning">
+        <span lang="en-us">A green span</span> in a red paragraph.
+      </p>
+      <p id="maincontent" lang="en-gb">
+        <span class="warning">A red span</span> in a green paragraph.
+      </p>      
+</body>
+</html>
