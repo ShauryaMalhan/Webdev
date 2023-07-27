@@ -1,0 +1,22 @@
+.Box{
+    border: 1px solid black;
+    height: 200px;
+    width: 150px;
+    background-image: linear-gradient(to right, yellow, green);
+    background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 255, 1));
+}
+.mydiv{
+    border: 1px solid black;
+    height: 200px;
+    width: 150px;
+    background-image: radial-gradient(red, blue);
+    background-image: radial-gradient(pink 25%, magenta 25%, red 50%);
+}
+.div2{
+    border: 1px solid black;
+    height: 200px;
+    width: 150px;
+    margin: 10;
+    background-image: conic-gradient(from 40deg, #fff, #000);
+    color: aqua;
+}
