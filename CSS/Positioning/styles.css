@@ -1,5 +1,21 @@
+.divp{
+    width: 1000px;
+    height: 1000px;
+}
+div{
+    display: inline-block; 
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: 1px solid black;
+}
+
 .div1{
-    position: absolute;
+    position: relative;
+    top: 15px;
+    left: 100px;
+}
+.div4{
+    position: sticky;
     top: 0px;
-    right: 10px;
 }
