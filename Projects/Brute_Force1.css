@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(220, 247, 247);
+}
+h1{
+    padding-left: 100px;
+    padding-top: 10px;
+    color: rgb(69, 64, 64);
+    text-shadow: 1px 1px 2px grey;
+    font-family: 'Times New Roman', Times, serif;
+}
+.box{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.Boxes{
+    border: 2px solid black;
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    background-color: white;
+    padding-top: 90px;
+    background-image: linear-gradient(to bottom, white, rgba(128, 73, 0, 0.105));
+}
+.amount{
+    font-size: 40px;
+    color: rgb(136, 7, 7);
+}
+.offer{
+    font-size: 20px;
+    font-weight: bold;
+}
+.discription{
+    color: rgba(128, 128, 128, 0.514);
+}
+.tick{
+    height: 20px;
+}
+.benefits{
+    text-align: left;
+    padding-left: 60px;
+}
+#tt{
+    background-color: rgba(59, 53, 17, 0.142);
+}
