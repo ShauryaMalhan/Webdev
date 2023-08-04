@@ -1,31 +1,34 @@
 body{
     background-color: rgb(220, 247, 247);
+    /* background-color: black; */
 }
 h1{
     padding-left: 100px;
     padding-top: 10px;
     color: rgb(69, 64, 64);
     text-shadow: 1px 1px 2px grey;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', serif;
 }
 .box{
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 60px;
-    row-gap: 50px;
+    row-gap: 70px;
     column-gap: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .Boxes{
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.571);
+    box-shadow: 0px 0px 5px 5px rgba(128, 128, 128, 0.571);
     height: 350px;
-    width: 300px;
+    width: 290px;
     text-align: center;
     background-color: white;
-    padding-top: 90px;
+    /* background-color: rgb(32, 32, 32); */
+    padding-top: 70px;
+    padding-bottom: 20px;
     background-image: linear-gradient(to bottom, white, rgba(128, 73, 0, 0.105));
 }
 .amount{
@@ -60,6 +63,7 @@ h1{
     min-width: 150px;
     cursor: pointer;
     padding-top: 0px;
+    font-family: Garamond, serif;
 }
 .Register:after{
     content: ">>";
@@ -84,4 +88,21 @@ hr{
     border: none;
     background-color: white;
     border-radius: 2px;
+}
+.image{
+    margin-bottom: 10px;
+    margin-top: -120px;
+    display: flex;
+    justify-content: space-evenly;
+    row-gap: 150px;
+    transform: translateZ(1px);
+    gap: 20px;
+}
+#img{
+    display: flex;
+    background-color: white;
+    border-radius: 50%;
+    border: 4px solid rgba(99, 99, 99, 0.331);
+    height: 100px;
+    width: 100px;
 }
