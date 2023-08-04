@@ -13,9 +13,14 @@ h1{
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 60px;
+    row-gap: 50px;
+    column-gap: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 .Boxes{
-    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(128, 128, 128, 0.571);
     height: 350px;
     width: 300px;
     text-align: center;
@@ -43,4 +48,40 @@ h1{
 }
 #tt{
     background-color: rgba(59, 53, 17, 0.142);
+}
+.Register{
+    position: relative;
+    height: 30;
+    background-color: #5ca1e1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    min-height: 30px;
+    min-width: 150px;
+    cursor: pointer;
+    padding-top: 0px;
+}
+.Register:after{
+    content: ">>";
+    position: absolute;
+    opacity: 0;  
+    bottom: 8px;
+    right: -20px;
+    transition: 0.5s;
+}
+.Register:hover{
+    padding-right: 20px;
+}
+.Register:hover:after{
+  opacity: 1;
+  right: 10px;
+}
+hr{
+    position: relative;
+    width: 650px;
+    margin-right: 550px;
+    height: 5px;
+    border: none;
+    background-color: white;
+    border-radius: 2px;
 }
