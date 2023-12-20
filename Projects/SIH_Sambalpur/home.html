@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts link for Dancing Script -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<style>
+    
+        :root {
+            
+      --primary: #B6FFFA;
+      --secondary: #7edbfc;
+      --gradient1: #80B3FF;
+      --gradient2: #8830b8;
+      --gradient3: #b093db;
+    }
+
+    @font-face {
+            font-family: 'LemonJelly';
+            src: url('fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+            /* Add additional font formats if available, e.g., woff, woff2 */
+        }
+    
+    body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(var(--primary), var(--gradient1), var(--gradient3));
+            background-repeat: no-repeat;
+            background-size: cover; 
+            display: flex;
+            align-items: center;
+            min-height: 100vh; 
+            flex-direction: column;
+            font: helveti;
+            width: 100%;
+        }
+        #navbar {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 50%;
+                background: rgba(255, 250, 240, 0.211);
+                border-radius: 0 0 100% 100%;
+                box-shadow: 0px 0px 45px rgba(0, 0, 0, 0.11);
+                transition: transform 0.3s ease-in-out;
+                z-index: -1;
+            }
+    
+            body:hover #navbar {
+                transform: translateY(0);   
+            }
+    
+    h1 {
+      font-size: 100px;
+      /* text-transform: uppercase; */
+      font-family: 'LemonJelly';
+      letter-spacing: -3px;
+      transition: 700ms ease;
+      font-variation-settings: "wght" 311;
+      margin-bottom: 0.8rem;
+      color: #0251b3;
+      outline: none;
+      text-align: center;
+    }
+    
+    h1:hover {
+      font-variation-settings: "wght" 582; 
+      letter-spacing: 1px;
+    }
+    
+    .roller{
+      height: 4.125rem;
+      line-height: 4rem;
+      position:relative;
+      overflow: hidden; 
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 90px;
+      
+      color: #1D3557;
+    }
+    
+    
+    #spare-time{
+      font-size: 1rem;
+      font-style: italic;
+      letter-spacing: 1rem;
+      margin-top: 0;
+      color: #0f1161;
+      
+    }
+    
+    .roller #rolltext {
+      font-style: italic;
+      position: absolute;
+      top: 0;
+      animation: slide 5s infinite;  
+    }
+    
+    @keyframes slide {
+      0%{
+        top:0;
+      }
+      25%{
+        top: -4rem;    
+      }
+      50%{
+        top: -8rem;
+      }
+      72.5%{
+        top: -12.25rem;
+      }
+    }
+    
+    @media screen and (max-width: 600px){
+    h1{
+      text-align:center;
+      text-transform: uppercase;
+      color: #F1FAEE; 
+      font-size: 2.125rem;
+    }
+      
+      .roller{
+ 
+      height: 2.6rem; 
+      line-height: 2.125rem;  
+      }
+      
+      #spare-time {
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+      }
+      
+      .roller #rolltext {  
+      animation: slide-mob 5s infinite;  
+    }
+      
+      @keyframes slide-mob {
+      0%{
+        top:0;
+      }
+      25%{
+        top: -2.125rem;    
+      }
+      50%{
+        top: -4.25rem;
+      }
+      72.5%{
+        top: -6.375rem;
+      }
+    }
+    }
+    
+    /* .Buttons {
+        display: flex;
+        justify-content: space-between;
+        width: 70%; 
+        margin-top: 50px; 
+    }
+    
+    
+    .inner-new-btn {
+        margin-right: 100px; 
+    }
+    
+  
+    .inner-all-btn {
+        margin-left: 100px;
+    }
+    
+    .inner-new-btn,
+    .inner-all-btn {
+        --color: #006ba981;
+        padding: 0.8em 1.7em;
+        background-color: transparent;
+        border-radius: .3em;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: .5s;
+        font-weight: 400;
+        font-size: 17px;
+        border: 1px solid;
+        font-family: inherit;
+        text-transform: uppercase;
+        color: var(--color);
+        z-index: 1;
+        flex-grow: 1;
+    }
+    
+    .inner-new-btn::before,
+    .inner-new-btn::after,
+    .inner-all-btn::before,
+    .inner-all-btn::after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        border-radius: 50%;
+        z-index: -1;
+        background-color: var(--color);
+        transition: 1s ease;
+    } */
+    
+    /* .Buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-top: 50px; 
+    
+}
+
+.inner-new-btn,
+.inner-all-btn,
+.inner-nep-btn {
+    height: 80px;
+    width: 200px;
+    --color: #3a55a6; 
+    padding: 0.8em 1.7em;
+    background-color: var(--color);
+    border-radius: 1em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: #fff; 
+    z-index: 1;
+    flex-grow: 1;
+    text-align: center; 
+    
+
+}
+
+.inner-new-btn {
+    margin-left: 140px;
+    margin-right: 150px; 
+}
+
+
+.inner-all-btn {
+    margin-right: 150px; 
+    margin-left: 150px; 
+
+
+.inner-nep-btn {
+    margin-left: 150px; 
+}
+
+.inner-new-btn::before,
+.inner-new-btn::after,
+.inner-all-btn::before,
+.inner-all-btn::after,
+.inner-nep-btn::before,
+.inner-nep-btn::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+ 
+}
+    .inner-new-btn::before,
+    .inner-new-btn::after {
+        top: -1em;
+        left: -1em;
+    }
+    
+    .inner-new-btn::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+    }
+    
+    .inner-all-btn::before,
+    .inner-all-btn::after {
+        top: -1em;
+        left: -1em;
+    }
+    
+    .inner-all-btn::after {
+        left: calc(100% + 1em);
+        top: calc(100% + 1em);
+    }
+    
+    .inner-new-btn:hover::before,
+    .inner-new-btn:hover::after,
+    .inner-all-btn:hover::before,
+    .inner-all-btn:hover::after {
+        height: 410px;
+        width: 410px;
+        background-color: rgba(197, 198, 245, 0.8);
+    }
+    
+    .inner-new-btn:hover {
+        color: rgb(10, 25, 30);
+    }
+    
+    .inner-all-btn:hover {
+        color: rgb(10, 25, 30);
+    }
+    
+    .inner-new-btn:active,
+    .inner-all-btn:active {
+        filter: brightness(.8);
+    }
+    button{
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+    } */
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+:root {
+  --glow-color: hsl(186 100% 69%);
+}
+
+.buttons{
+    height: 100px;
+    width: 150px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+}
+.glowing-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 150px; /* Adjust the spacing between buttons */
+  margin-top: 50px; /* Adjust the top margin as needed */
+}
+
+.glowing-btn {
+  position: relative;
+  color: var(--glow-color);
+  cursor: pointer;
+  padding: 0.25em 0.8em; /* Adjust the padding to reduce button size */
+  font-size: 1.5em;
+  border: 0.15em solid var(--glow-color);
+  border-radius: 0.45em;
+  background: none;
+  perspective: 2em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  /* letter-spacing: 1em; */
+
+  -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+    0px 0px 0.5em 0px var(--glow-color);
+  animation: border-flicker 2s linear infinite;
+}
+
+.glowing-txt {
+  float: left;
+  margin-left: 0.6em;
+  margin-right: 0.6em;
+  -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+    0 0 0.45em var(--glow-color);
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+  animation: text-flicker 3s linear infinite;
+}
+
+.faulty-letter {
+  opacity: 0.5;
+  animation: faulty-flicker 2s linear infinite;
+}
+
+.glowing-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.7;
+  filter: blur(1em);
+  transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+.glowing-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  background-color: var(--glow-color);
+  box-shadow: 0 0 2em 0.2em var(--glow-color);
+  transition: opacity 100ms linear;
+}
+
+.glowing-btn:hover {
+  color: #0251b3;
+  text-shadow: none;
+  animation: none;
+}
+
+.glowing-btn:hover .glowing-txt {
+  animation: none;
+}
+
+.glowing-btn:hover .faulty-letter {
+  animation: none;
+  text-shadow: none;
+  opacity: 1;
+}
+
+.glowing-btn:hover:before {
+  filter: blur(1.5em);
+  opacity: 1;
+}
+
+.glowing-btn:hover:after {
+  opacity: 1;
+}
+
+@keyframes faulty-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 0.1;
+  }
+  4% {
+    opacity: 0.5;
+  }
+  19% {
+    opacity: 0.5;
+  }
+  21% {
+    opacity: 0.1;
+  }
+  23% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  83% {
+    opacity: 0.4;
+  }
+
+  87% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-flicker {
+  0% {
+    opacity: 0.1;
+  }
+
+  2% {
+    opacity: 1;
+  }
+
+  8% {
+    opacity: 0.1;
+  }
+
+  9% {
+    opacity: 1;
+  }
+
+  12% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.7;
+  }
+  72% {
+    opacity: 0.2;
+  }
+
+  77% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes border-flicker {
+  0% {
+    opacity: 0.1;
+  }
+  2% {
+    opacity: 1;
+  }
+  4% {
+    opacity: 0.1;
+  }
+
+  8% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .glowing-btn{
+    font-size: 1em;
+  }
+}
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+#foot {
+        position: fixed; /* Change to fixed for it to be at the bottom */
+        bottom: 0;
+        width: 100%;
+        margin-bottom: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: #3586ff;
+  height: 85px;
+  padding: 0px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px ;
+    flex-wrap: wrap;
+    z-index: 1001;
+}
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 100px;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("https://i.ibb.co/wQZVxxk/wave.png");
+  background-size: 1000px 100px;
+  transform: translate(0px, 20px);
+}
+
+.wave#wave1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 0px;
+  }
+}
+    #logos{
+        width: 420px;
+        margin-left: 30px;
+    }
+    h1{
+        margin-top: -130px;
+    }
+    #smart{
+        margin-top: 55px;
+    }
+    </style>
+
+<body>
+    <div class="nv">
+        <h2 class="nvt"></h2>
+    </div>
+    <div class="nav" id="navbar">
+        
+    </div>
+    <div id="smart">
+        <div id="logo"><img id="logos" src="Logo_w.png" alt=""></div>
+        <div id="adj">
+            <h1 style="font-family: 'Dancing Script', cursive;">PathPilot</h1>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="outer">
+            <div class="roller">
+            <span id="rolltext">Navigating Futures, One Career at a Time.<br/>
+                Chart Your Course, Ignite Your Career<br/>
+                Dream Big, Plan Smart Your Career Awaits<br/>
+                <span id="spare-time">Discover Your Passion</span><br/>
+            </div>
+
+            <div class="container_1">
+                
+
+            </div>
+        </div>
+
+        <div class="Buttons">
+            <div class="glowing-btn-container">
+                <div class="inner-new">
+                    <form action="/counselor">
+                        <button class="glowing-btn">
+                            <span class="glowing-txt">Career Counsellor</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="inner-all">
+                    <form action="/roads">
+                        <button class="glowing-btn">
+                            <span class="glowing-txt">Roadmaps</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="inner-all">
+                    <form action="/counselor_NEP">
+                        <button class="glowing-btn">
+                            <span class="glowing-txt">NEP Counsellor</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+          
+          
+        
+        <div class="container">
+            <!-- Add some content here if needed -->
+        </div>
+    </div> 
+    <div id="foot">
+        <div class="footer">
+            <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <ul class="menu">
+              <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">About</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Services</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Team</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
+        
+            </ul>
+          
+          </footer>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </div>   
+</body>
+</html>

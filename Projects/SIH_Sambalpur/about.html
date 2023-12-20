@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <style>
+        h1{
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+            text-align: center;
+            color: var(--gradient2);
+            margin-top: -2%;
+        }
+        :root{
+            --primary: #B6FFFA;
+            --secondary: #7edbfc;
+            --gradient1: #80B3FF;
+            --gradient2: #4082e6;
+        }
+        body{
+            background-color: var(--secondary);
+        }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+        #foot {
+                position: fixed; /* Change to fixed for it to be at the bottom */
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+              }
+        
+        
+        
+        .footer {
+          position: relative;
+          width: 100%;
+          background: #3586ff;
+          height: 85px;
+          padding: 0px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        
+        .social-icon{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px ;
+            flex-wrap: wrap;
+            z-index: 1001;
+        }
+        .menu {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0px 100px;
+          flex-wrap: wrap;
+        }
+        
+        .social-icon__item,
+        .menu__item {
+          list-style: none;
+        }
+        
+        .social-icon__link {
+          font-size: 2rem;
+          color: #fff;
+          margin: 0 10px;
+          display: inline-block;
+          transition: 0.5s;
+        }
+        .social-icon__link:hover {
+          transform: translateY(-10px);
+        }
+        
+        .menu__link {
+          font-size: 1.2rem;
+          color: #fff;
+          margin: 0 10px;
+          display: inline-block;
+          transition: 0.5s;
+          text-decoration: none;
+          opacity: 0.75;
+          font-weight: 300;
+        }
+        
+        .menu__link:hover {
+          opacity: 1;
+        }
+        
+        .footer p {
+          color: #fff;
+          margin: 15px 0 10px 0;
+          font-size: 1rem;
+          font-weight: 300;
+        }
+        
+        .wave {
+          position: absolute;
+          top: -100px;
+          left: 0;
+          width: 100%;
+          height: 100px;
+          background: url("https://i.ibb.co/wQZVxxk/wave.png");
+          background-size: 1000px 100px;
+          transform: translate(0px, 20px);
+        }
+        
+        .wave#wave1 {
+          z-index: 1000;
+          opacity: 1;
+          bottom: 0;
+          animation: animateWaves 4s linear infinite;
+        }
+        
+        .wave#wave2 {
+          z-index: 999;
+          opacity: 0.5;
+          bottom: 10px;
+          animation: animate 4s linear infinite !important;
+        }
+        
+        .wave#wave3 {
+          z-index: 1000;
+          opacity: 0.2;
+          bottom: 15px;
+          animation: animateWaves 3s linear infinite;
+        }
+        
+        .wave#wave4 {
+          z-index: 999;
+          opacity: 0.7;
+          bottom: 20px;
+          animation: animate 3s linear infinite;
+        }
+        
+        @keyframes animateWaves {
+          0% {
+            background-position-x: 1000px;
+          }
+          100% {
+            background-positon-x: 0px;
+          }
+        }
+        
+        @keyframes animate {
+          0% {
+            background-position-x: -1000px;
+          }
+          100% {
+            background-positon-x: 0px;
+          }
+        }
+        #logo{
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+          }
+          #cor{
+            height: 50px;
+          }
+          .sections{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            border: solid 1px black;
+            padding: 20px;
+            margin: 15px;
+            font-size: 20px;
+            
+          }
+          #one , #three{
+            background-color: #144058;
+            color: white;
+          }
+          #two, #four{
+            background-color: #E58D2E;
+            color: white;
+          }
+          a{
+            text-decoration: none;
+          }
+          #first{
+            display: none;
+          }
+          #second{
+            display: none;
+          }
+          #third{
+            display: none;
+          }
+          #fourth{
+            display: none;
+          }
+          #back{
+            display: none;
+          }
+
+    </style>
+</head>
+<body>
+    <a href="/">
+      <div id="logo"><img id="cor" src="Logo.png" alt=""></div>
+    </a>
+    <h1>ABOUT</h1>
+    <div id="sec">
+        <div onclick="vanish('first')" id="one" class="sections">National Education Policy 2020</div>
+        <div onclick="vanish('second')" id="two" class="sections">About PathPilot</div>
+        <div onclick="vanish('third')" id="three" class="sections">Future Scope</div>
+        <div onclick="vanish('fourth')" id="four" class="sections">About Us</div>
+    </div>
+    <div id="text_block">
+        <div id="first" class="app">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, corrupti.</div>
+        <div id="second" class="app">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, expedita labore ut sapiente error, repellendus quae vel explicabo doloribus a, fugiat perferendis ipsum? Ab suscipit pariatur commodi reprehenderit deserunt voluptatem eius, repudiandae animi tenetur quasi inventore praesentium nostrum expedita ut et doloremque dicta minima a doloribus esse sed. Mollitia quisquam nam nisi incidunt itaque sapiente quod nemo. Quis aspernatur voluptatum commodi maxime voluptatem, eveniet nemo pariatur sed sit. Dignissimos, nemo quis? Itaque temporibus veniam magni ut ea sequi ducimus. Saepe doloribus cumque dolore nisi, facilis magni temporibus magnam totam enim harum incidunt obcaecati quam quod odio reiciendis cupiditate aliquid debitis?</div>
+        <div id="third" class="app">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid eius nulla corrupti sunt fuga placeat hic dolor rem at! Architecto corporis culpa ab ea fugit itaque sed maxime eligendi tenetur minus porro recusandae atque, eos necessitatibus qui optio tempore eaque est quidem adipisci hic vitae autem voluptas. Nulla iure sit et, delectus minima, reiciendis quam quas praesentium nemo expedita ea dolorum inventore maxime accusamus incidunt adipisci provident vel repellat pariatur velit totam soluta sint? Accusantium ducimus odio sit eligendi minima non repellendus eveniet a! Asperiores veritatis voluptas ipsum laudantium facilis perspiciatis libero magni in nulla blanditiis! Esse nemo deserunt fugit, voluptatum aliquam, distinctio minima et enim quas, quod eum eius. Alias nulla eaque facere molestiae totam adipisci reiciendis dolorum officia architecto aliquid eum esse deleniti qui expedita saepe sunt nihil possimus, facilis error at similique maiores itaque. Tenetur odio debitis ea doloremque optio quibusdam dignissimos suscipit alias voluptatibus repellendus enim maiores cupiditate minima, recusandae cum quas. Dolore, porro minus! Culpa, distinctio omnis officia dolorum minus voluptates voluptatum. Quisquam qui quo nostrum distinctio esse minus commodi blanditiis! Enim tenetur perspiciatis sapiente velit adipisci cupiditate itaque quibusdam perferendis illum, deserunt quod iste eaque aut odio et distinctio repudiandae animi quas ipsam! Corporis assumenda dolores minus dolorum consectetur ab unde, quae magni. Voluptates sequi cupiditate accusamus ipsam excepturi provident non aut vero ex porro omnis nemo, quo dolores enim illo. Dignissimos recusandae, dolorem repellat illo nostrum itaque quia dolore impedit unde facere ipsa vero dolorum inventore nam sed placeat adipisci! Suscipit rerum, ex magnam aliquam necessitatibus quibusdam perferendis, facere accusamus deserunt minima assumenda asperiores quasi nisi veritatis eos dignissimos odio laboriosam. Tempore asperiores accusantium dicta, earum commodi fugiat, officiis magnam delectus eum nemo sapiente eius consequatur error quam, reiciendis repudiandae quasi quisquam hic? Mollitia, numquam perferendis? Optio natus at totam in ipsum, laudantium delectus nostrum vel consequuntur quam incidunt sapiente ex libero maxime quas? Iste hic blanditiis quia ullam vero voluptates vitae architecto sequi nisi perferendis, fugiat suscipit quidem dolorem, sunt nihil error voluptatibus quisquam earum rerum iusto dolorum corporis libero! Exercitationem, esse illum nesciunt, voluptas debitis commodi tenetur, maxime dolorem totam labore a. Consequuntur rerum neque dolorem fugit possimus voluptates aspernatur sit omnis repellendus consectetur ea nulla nostrum a nisi aut quos cumque sed amet aliquam quisquam, asperiores officia vero aliquid! Eligendi repudiandae, quam excepturi perferendis sed dolore! Commodi quia blanditiis, excepturi quae ipsam nisi neque dolorum harum labore aut ex aliquid sit tempora nihil nostrum nulla nobis quasi! Consequuntur ex at incidunt aperiam aut quibusdam minima nobis laudantium, tempore dolor accusantium non nemo vitae ipsum ipsam earum velit asperiores sunt maiores? Ad, ipsam ab aut adipisci sint vel magni placeat asperiores! Beatae fugiat vitae, officiis vero ea culpa quo ullam optio voluptate illo nam repellat! Quia architecto repellendus repellat doloremque quis voluptates optio enim quos quaerat sequi officiis aut odio corporis, quod sit. Commodi consequatur voluptatum placeat, non, explicabo iusto distinctio ullam doloremque officiis ab tenetur fuga velit, est aspernatur reiciendis? Suscipit totam repellat necessitatibus quis laudantium adipisci, fugit asperiores doloribus sapiente obcaecati quasi odio voluptatem officiis? Repudiandae cumque maiores qui quod, mollitia quam a, rem sed nesciunt vel consequatur! Libero inventore voluptatem, minus doloremque soluta dolores, nisi saepe doloribus obcaecati a perspiciatis assumenda, suscipit cumque quas mollitia deleniti quasi ducimus accusamus enim tenetur officiis? Voluptatum sunt nam deserunt velit cupiditate reprehenderit praesentium laboriosam nisi quidem nobis eius sequi et nostrum, atque dolor, ratione officiis quis unde inventore saepe consequuntur repellendus architecto tenetur? A veritatis ex neque? Magnam mollitia at cum deserunt molestiae numquam laborum dolor nam suscipit, soluta veritatis nesciunt libero fuga esse repellat autem. Alias quidem doloribus fugit, dignissimos ratione natus accusamus ex! Nulla, perspiciatis quibusdam aliquam deleniti delectus amet est eum consequatur modi inventore consequuntur saepe? Rerum nostrum dolore numquam facilis quidem quisquam nemo corrupti cum consequuntur unde incidunt, delectus architecto accusamus corporis provident, magni eligendi expedita reiciendis. Fuga, pariatur porro ad quod molestias illo sint culpa necessitatibus corrupti, reiciendis ea delectus recusandae veniam laboriosam, quo ut consequuntur minus tempora perferendis a. Odio cum totam ipsam atque maxime accusamus quibusdam soluta esse, ea veniam modi, nobis molestias. Eos recusandae doloribus, ut omnis quam aliquid suscipit placeat ea repudiandae quod officiis? Repellendus ducimus, voluptatum reiciendis adipisci blanditiis quod consectetur laudantium impedit quasi, nesciunt qui exercitationem non dicta. Similique, cumque adipisci delectus exercitationem voluptas ipsam voluptatibus itaque fugiat, ut corrupti ratione dicta atque non praesentium eius natus soluta? Quibusdam adipisci, officiis qui aut animi fugit voluptate illo sunt nemo, commodi facere itaque quod fuga sapiente reprehenderit natus praesentium distinctio amet provident? Reprehenderit deleniti exercitationem inventore, aliquid mollitia harum voluptatem est id? Esse quam cupiditate natus delectus dolorem in commodi eveniet quibusdam, perferendis corrupti dolor nisi libero quo error autem accusantium, eum ipsa accusamus? Ratione, inventore ducimus consequuntur maxime nam molestiae magnam enim. Libero totam rerum ipsam veniam! Earum soluta id architecto placeat omnis iure eligendi ea, minima deserunt obcaecati sed provident deleniti dicta rem dolores consectetur nemo, alias suscipit nisi corrupti vel. Nemo fugit a est nisi debitis, rem omnis labore ipsa dignissimos, distinctio, amet sint tenetur ea! Maiores architecto dolor doloremque placeat perferendis veritatis ea minus adipisci soluta, error commodi, rem magni similique expedita omnis iure modi, quibusdam accusantium nemo vel. Inventore explicabo soluta deserunt sapiente quidem. Repellat nobis eligendi soluta ex eius? Quibusdam neque reiciendis, distinctio id tenetur, error qui cum hic ad aliquam illum omnis fugiat, reprehenderit sequi repellat vitae numquam ea nisi eum sapiente ducimus quod ab alias. Amet laboriosam repudiandae esse sed dicta temporibus doloremque neque commodi officiis. Similique fuga corporis veniam laboriosam in repellendus ex vitae quasi totam autem, aliquid necessitatibus quod ad porro explicabo fugit doloribus excepturi, impedit placeat expedita quos, molestias ullam. Accusantium reiciendis, cum totam quo adipisci sunt nesciunt? Nisi, doloribus. Veniam amet nostrum dicta id, exercitationem asperiores corporis cupiditate dolorum quas accusantium, hic neque perspiciatis sed aperiam adipisci, vero ullam voluptas obcaecati tempora velit consectetur explicabo. Earum veniam perferendis magni pariatur, vitae eveniet natus est nesciunt! Earum mollitia sed consectetur architecto ipsam eum rerum, dolorem adipisci a laudantium, quas ipsa.</div>
+        <div id="fourth" class="app"></div>
+        <a href="about.html" id="back">
+            <img src="back_arrow" alt="">
+        </a>
+    </div>
+    <div id="foot">
+        <div class="footer">
+            <div class="waves">
+              <div class="wave" id="wave1"></div>
+              <div class="wave" id="wave2"></div>
+              <div class="wave" id="wave3"></div>
+              <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+              <li class="social-icon_item"><a class="social-icon_link" href="#">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <ul class="menu">
+              <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">About</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Services</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Team</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
+        
+            </ul>
+          
+          </footer>
+          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </div>
+    <script>
+        function vanish(txt){
+            doc = document.getElementById('sec').style.display = 'none';
+            docs = document.getElementById(txt).style.display = 'block';
+            dd = document.getElementById('back').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

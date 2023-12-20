@@ -1,0 +1,39 @@
+.boxes{
+    display: flex;
+    flex-wrap: flex;
+    justify-content: space-evenly;
+}
+#police{
+    border: 1px solid black;
+    height: 250px;
+    width: 400px;
+    margin-top: 50px;
+}
+.notif{
+    display: flex;
+    flex-wrap: flex;
+    justify-content: space-evenly;
+}
+#notif{
+    border: 1px solid black;
+    height: 250px;
+    width: 800px;
+    margin-top: 50px;
+    overflow: auto;
+}
+.vertical-line {
+    width: 2px;
+    background-color: #333;
+    height: 300px;
+    margin-top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+.box {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 150px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}

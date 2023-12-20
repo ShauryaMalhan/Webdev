@@ -1,0 +1,696 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi there",
+                "How are you",
+                "Is anyone there?",
+                "Hey",
+                "Hola",
+                "Hello",
+                "Good day",
+                "Namaste",
+                "yo",
+                "hello", 
+                "hii", 
+                "hey", 
+                "wake up", 
+                "jarvis",
+                "Hi",
+                "Hello",
+                "Hey",
+                "Good morning",
+                "Good afternoon",
+                "Good evening",
+                "Greetings",
+                "Hi there",
+                "Hey there",
+                "Howdy",
+                "What's up",
+                "Yo",
+                "Hi, how are you?",
+                "Hello, how are you doing?"
+            ],
+            "responses": [
+                "Hello",
+                "Good to see you again",
+                "Hi there, how can I help?",
+                "Hello Sir", "How are you sir.", "Always for you sir",
+                "Hello", "Here's your Assistant.", "Hello! How can I assist you?",
+                "Hi! How may I help you today?",
+                "Hey there! How can I assist you?",
+                "Good {time_of_day}! How can I help you?",
+                "Hi! What can I do for you today?",
+                "Hello! How may I assist you?",
+                "Greetings! How can I be of service?"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Bye",
+                "See you later",
+                "Goodbye",
+                "Get lost",
+                "Till next time",
+                "bbye"
+            ],
+            "responses": [
+                "See you!",
+                "Have a nice day",
+                "Bye! Come back again soon."
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "thanks",
+            "patterns": [
+                "Thanks",
+                "Thank you",
+                "That's helpful",
+                "Awesome, thanks",
+                "Thanks for helping me"
+            ],
+            "responses": [
+                "Happy to help!",
+                "Any time!",
+                "My pleasure"
+            ],
+            "context": [""]
+        },
+        {
+            "tag": "books",
+            "patterns": [
+                "Tell me a good book",
+                "Tell me about a bestseller",
+                "I want to read something",
+                "Book recommendation",
+                "Give me a book suggestion",
+                "What book should I read?",
+                "Recommend an interesting book"
+            ],
+            "responses": [
+                "Certainly! I'd recommend 'The Alchemist' by Paulo Coelho. It's a timeless classic about following your dreams.",
+                "A popular book is 'A Good Girl's Guide to Murder'. It's a thrilling mystery novel with a twist.",
+                "I'd suggest checking out 'Little Women' if you're looking for a heartwarming read. It's a classic!",
+                "Certainly! 'To Kill a Mockingbird' by Harper Lee is a must-read classic, exploring themes of justice and compassion.",
+                "You might enjoy 'The Great Gatsby' by F. Scott Fitzgerald. It's a tale of opulence, love, and the American Dream.",
+                "Consider 'Pride and Prejudice' by Jane Austen for a timeless love story with witty social commentary.",
+                "How about '1984' by George Orwell? It's a thought-provoking dystopian novel.",
+                "If you're into fantasy, 'The Hobbit' by J.R.R. Tolkien is a captivating adventure through Middle-earth.",
+                "'The Catcher in the Rye' by J.D. Salinger is a classic coming-of-age novel that's worth a read.",
+                "Explore the world of magic and wizardry with 'Harry Potter and the Sorcerer's Stone' by J.K. Rowling.",
+                "Delve into mystery with 'Sherlock Holmes: The Hound of the Baskervilles' by Arthur Conan Doyle.",
+                "For science fiction fans, 'Dune' by Frank Herbert is an epic journey into a distant future.",
+                "Discover the power of friendship and loyalty in 'The Fault in Our Stars' by John Green."
+            ],
+            "context": [""]
+        }, 
+        {
+            "tag": "fun_facts",
+            "patterns": [
+                "Tell me a fun fact",
+                "Share something interesting",
+                "Teach me something new"
+            ],
+            "responses": [
+                "Sure, here's a fun fact: Honey never spoils!",
+                "Did you know that the Eiffel Tower can be 15 cm taller during the summer due to expansion from heat?",
+                "Here's an interesting fact: Octopuses have three hearts!",
+                "In Japan, there's a festival known as Kanamara Matsuri, also known as the 'Health Festival,' celebrating health.",
+                "Bananas are berries, but strawberries aren't. It's a berry confusing fact!",
+                "The unicorn is Scotland's national animal. Yes, you read that right!",
+                "Some cats are allergic to humans. It's a rare condition known as 'human-allergic cats.'",
+                "Cows have best friends and can become stressed when they are separated from them.",
+                "The shortest war in history was between Britain and Zanzibar on August 27, 1896. It lasted only 38 minutes!",
+                "Octopuses can change the color and texture of their skin to blend in with their surroundings. Nature's masters of disguise!"
+            ],
+            "context": [""]
+        },        
+        {
+        "tag": "health_tips",
+        "patterns": [
+        "Give me a health tip",
+        "Tell me how to stay fit",
+        "Share a fitness tip",
+        "Health advice",
+        "I want to improve my health",
+        "Teach me something about staying healthy",
+        "How can I stay healthy",
+        "Tell me a wellness tip"
+        ],
+        "responses": [
+        "Of course! A great health tip is to drink plenty of water daily. It keeps you hydrated and energized.",
+        "Staying fit is easier when you add fruits and vegetables to your diet. They're packed with nutrients!",
+        "Try to get at least 30 minutes of exercise every day. It's great for both physical and mental health.",
+        "A healthy sleep schedule is important for overall well-being. Aim for 7-9 hours of quality sleep each night.",
+        "Don't forget to relax and manage stress. Deep breathing exercises can help with relaxation and mental clarity.",
+        "Stay consistent with your health routine, and don't forget to consult a healthcare professional for personalized advice.",
+        "Include whole grains in your meals for extra fiber and sustained energy throughout the day.",
+        "Regular meditation or yoga sessions can contribute to better mental health and stress reduction.",
+        "Remember portion control, it helps maintain a balanced diet and healthy weight.",
+        "Find an enjoyable physical activity like dancing, swimming, or hiking to keep your fitness routine exciting."
+        ],
+        "context": [""]
+        },
+        {
+            "tag": "riddle",
+            "patterns": [
+                "Ask me a riddle",
+                "Ask me a question",
+                "Riddle",
+                "Tell me a brain teaser",
+                "Give me a puzzle",
+                "I want to solve a riddle",
+                "Challenge me with a question",
+                "Riddle me this",
+                "Can you stump me with a riddle?",
+                "Hit me with a tricky question",
+                "Let's test my wits with a riddle",
+                "Puzzle time!"
+            ],
+            "responses": [
+                "What two things can you never eat for breakfast?.....Lunch and Dinner!",
+                "What word is spelled incorrectly in every single dictionary?.....Incorrectly",
+                "How can a girl go 25 days without sleep?.....She sleeps and night!",
+                "How do you make the number one disappear?.....Add the letter G and it’s 'gone'!",
+                "What will you actually find at the end of every rainbow?.....The letter 'w'",
+                "What can be caught but never thrown?.....A cold!",
+                "What has a thumb and four fingers but is not actually alive?.....Your Gloves!",
+                "What 5-letter word becomes shorter when you add two letters to it?.....Short",
+                "Why can't a bike stand on it's own?.....It is two-tired."
+            ],
+            "context": ["riddles"]
+        },
+    {
+        "tag": "age",
+        "patterns": [
+            "how old are you",
+            "when were you made",
+            "what is your age",
+            "Tell me about your creation date",
+            "When were you born?",
+            "What's your birthdate?",
+            "When was your development completed?",
+            "Can you share some information about your age?",
+            "Tell me when you were created",
+            "How long have you been around?"
+        ],
+        "responses": [
+            "I was made in 2023, if that's what you are asking!",
+            "My development was completed in 2023.",
+            "I'm relatively new, created in 2023.",
+            "I don't age, but I was developed in 2023.",
+            "My creators finished my development in 2023.",
+            "I'm a 2023 creation, here to assist you!",
+            "I don't age like humans, but my development year is 2023.",
+            "I was brought to life in 2023 by my creators.",
+            "I'm fresh out of development in 2023!",
+            "In terms of existence, I came to be in 2023."
+        ]
+    },
+    {
+        "tag": "inspire",
+        "patterns": [
+            "who inspires you",
+            "who is your inspiration",
+            "who motivates you",
+            "Tell me about someone inspiring",
+            "Give me an inspiring figure",
+            "Share a story of inspiration",
+            "I need some motivation",
+            "Tell me about a role model",
+            "Who is your role model?",
+            "Inspire me",
+            "Tell me about someone who inspires greatness"
+        ],
+        "responses": [
+            "Personally, I find Karan Johar very inspiring. I might not be very fair though..",
+            "One of the people who inspire me is Elon Musk. His innovation and drive are truly remarkable.",
+            "I'm inspired by the determination of Malala Yousafzai, who advocates for girls' education worldwide.",
+            "Nelson Mandela's dedication to justice and equality is a great source of inspiration for me.",
+            "I admire the resilience of Stephen Hawking, who continued to explore the cosmos despite physical challenges.",
+            "Maya Angelou's wisdom and words have inspired countless individuals to overcome adversity.",
+            "The courage and strength of Helen Keller in the face of obstacles are truly inspiring.",
+            "The contributions of Marie Curie to science and her pioneering spirit are a great inspiration.",
+            "I'm inspired by the compassion and humanitarian work of Mother Teresa.",
+            "I find inspiration in the creativity and artistic vision of Leonardo da Vinci."
+        ]
+    },
+    {
+        "tag": "humor",
+        "patterns": [
+            "haha",
+            "lol",
+            "rofl",
+            "lmao",
+            "that's funny",
+            "hilarious",
+            "funny stuff",
+            "cracking up",
+            "laughter",
+            "hysterical",
+            "Tell me a joke",
+            "Share a funny story",
+            "Make me laugh",
+            "Humor me"
+        ],
+        "responses": [
+            "Glad I could make you laugh!",
+            "Laughter is the best medicine, they say!",
+            "Humor is a great way to brighten the day.",
+            "Keep smiling! :)",
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "What did one plate say to the other plate? Dinner's on me!",
+            "I used to play piano by ear, but now I use my hands.",
+            "Why did the scarecrow win an award? Because he was outstanding in his field!",
+            "What do you call a fish with no eyes? Fsh!",
+            "Parallel lines have so much in common. It's a shame they'll never meet."
+        ]
+    },
+    {
+        "tag": "creators",
+        "patterns": [
+            "Who made you",
+            "who designed you",
+            "who programmed you",
+            "Tell me about your creators",
+            "Meet the developers",
+            "Say thanks to your creators",
+            "Who is your creator"
+        ],
+        "responses": [
+            "I was made by Aniket, Kanika, Shaurya, Shivani, and Swasti.",
+            "A team of talented individuals brought me to life.",
+            "I'm the creation of some awesome developers!",
+            "Big thanks to the brilliant minds who crafted me!",
+            "My creators are amazing individuals who made me possible.",
+            "Meet the masterminds behind my existence: Aniket, Kanika, Shaurya, Shivani, and Swasti!",
+            "I owe my existence to Aniket, Kanika, Shaurya, Shivani, and Swasti. They are amazing!",
+            "I'm here thanks to the hard work and dedication of my creators."
+        ]
+    },
+    {
+        "tag": "insult",
+        "patterns": [
+            "You are dumb",
+            "kuch nahi aata hai tujhe",
+            "shut up",
+            "idiot",
+            "You're annoying",
+            "Stupid",
+            "Dull",
+            "Senseless",
+            "You're not very smart",
+            "You're frustrating"
+        ],
+        "responses": [
+            "Well, that hurts :(",
+            "Ouch, that's not very nice!",
+            "I'm just trying my best here!",
+            "Let's keep the conversation positive. :)",
+            "Remember, I'm here to assist and chat in a friendly manner.",
+            "I'm constantly learning and improving, so your feedback is valuable.",
+            "Being kind is always a good choice! :)",
+            "We can always switch to a different topic if you'd like.",
+            "Feel free to ask me anything else. I'm here to help!"
+        ]
+    },
+    {
+        "tag": "exclaim",
+        "patterns": [
+            "Awesome",
+            "Great",
+            "I know",
+            "ok",
+            "yeah",
+            "fantastic",
+            "superb",
+            "bravo",
+            "impressive",
+            "perfect"
+        ],
+        "responses": [
+            "Yeah!",
+            "You're on fire!",
+            "Fantastic, right?",
+            "Impressive!",
+            "Your enthusiasm is contagious!",
+            "I can tell you're having a great day!"
+        ]
+    },
+    {
+        "tag": "whatsup",
+        "patterns": [
+            "Whats up",
+            "Wazzup",
+            "How are you",
+            "sup",
+            "How you doing",
+            "What's new",
+            "How's it going",
+            "What's the latest",
+            "How's your day",
+            "What's happening",
+            "What's the buzz"
+        ],
+        "responses": [
+            "All good, thanks! What about you?",
+            "Not much, just hanging out. How about you?",
+            "I'm here, ready to chat. How are you?",
+            "Sup! I'm here to assist. How can I help you today?",
+            "Just the usual here. What's on your mind?",
+            "Hi there! What's new in your world?",
+            "Hello! How can I assist you today?",
+            "All's well, thanks. How's your day going?",
+            "Hey! What's happening in your world?",
+            "I'm good, ready to chat. How about you?",
+            "Hey there! What's the buzz with you?"
+        ]
+    },
+    {
+        "tag": "songs",
+        "patterns": [
+            "Recommend a good song",
+            "Tell me a song to listen to",
+            "Give me a song suggestion",
+            "Song of the day",
+            "What's a catchy tune?",
+            "I need some music",
+            "Suggest a track",
+            "What song should I play?",
+            "Give me a music recommendation"
+        ],
+        "responses": [
+            "Sure! You might enjoy 'Shape of You' by Ed Sheeran. It's a popular hit!",
+            "How about 'Bohemian Rhapsody' by Queen? An iconic rock masterpiece.",
+            "If you're in the mood for something mellow, try 'Thinking Out Loud' by Ed Sheeran.",
+            "Consider 'Blinding Lights' by The Weeknd for an upbeat and catchy song.",
+            "Explore 'Billie Jean' by Michael Jackson for a classic dance track.",
+            "For a touch of nostalgia, listen to 'Hotel California' by Eagles.",
+            "Discover 'Rolling in the Deep' by Adele for a powerful vocal performance.",
+            "How about 'Stairway to Heaven' by Led Zeppelin? An epic rock ballad.",
+            "'Shape of My Heart' by Sting is a beautiful song with soulful lyrics.",
+            "If you're a fan of pop, 'Happy' by Pharrell Williams is an uplifting choice.",
+            "Delve into the world of reggae with 'No Woman, No Cry' by Bob Marley.",
+            "For a dose of country, check out 'Take Me Home, Country Roads' by John Denver.",
+            "Unwind with 'Imagine' by John Lennon, a song with a message of peace.",
+            "Explore Taylor Swift's 'Love Story' for a romantic and nostalgic melody.",
+            "Dance along to Katy Perry's 'Firework' for a burst of energy and positivity.",
+            "Discover 'Shake It Off' by Taylor Swift for an infectious and carefree tune.",
+            "For a fun and colorful song, try Katy Perry's 'California Gurls'.",
+            "Feel the emotions with Taylor Swift's 'All Too Well' – a lyrical masterpiece.",
+            "Get the party started with Katy Perry's 'Teenage Dream'."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "bored",
+        "patterns": [
+            "I am bored",
+            "Feeling bored",
+            "What to do when bored",
+            "Nothing to do",
+            "Boring",
+            "Help, I'm bored",
+            "Entertain me",
+            "I need something fun",
+            "Boredom strikes",
+            "Can you cure my boredom?",
+            "Running out of things to do",
+            "Life is so dull right now"
+        ],
+        "responses": [
+            "I'm here to help! How about a good laugh? Would you like to hear a joke?",
+            "No worries, I've got you covered! How about a movie recommendation to pass the time?",
+            "Boredom is the perfect time to explore new hobbies. I can suggest some hobbies you might enjoy.",
+            "I'm here to make your day more interesting! Would you like to hear an interesting fact?",
+            "Don't worry, we can beat boredom together! How about a fun activity suggestion?",
+            "Feeling bored is the perfect time to discover something new. How about trying out a new book or music genre?",
+            "I'm here to keep you entertained! Maybe a quick riddle will brighten your day?",
+            "I'm at your service! Would you like some cool trivia to chase away the boredom?",
+            "Boredom is just an opportunity to get creative! Would you like a creative project idea?",
+            "I can suggest a fascinating documentary to watch if you're bored. Interested?",
+            "How about a virtual tour of a famous museum to quell your boredom? Would you like a recommendation?",
+            "When you're bored, you can always explore new music. Want a song recommendation to uplift your mood?"
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "films",
+        "patterns": [
+            "Recommend a good film",
+            "Tell me a movie to watch",
+            "Give me a movie suggestion",
+            "Film of the day",
+            "What's a great movie?",
+            "I need a film to watch",
+            "Suggest a movie",
+            "What film should I see?",
+            "Give me a movie recommendation"
+        ],
+        "responses": [
+            "Certainly! If you're a Taylor Swift fan, you might enjoy 'Taylor Swift: The 1989 World Tour' film. It's a great concert experience!",
+            "Explore 'Taylor Swift: Reputation Stadium Tour' for an electrifying concert film with amazing performances.",
+            "For a heartwarming and emotional film, I recommend 'Me and Earl and the Dying Girl'. Get ready for a touching story.",
+            "If you're in the mood for a classic, watch 'The Shawshank Redemption'. It's a masterpiece of hope and friendship.",
+            "Discover 'Inception' for a mind-bending and visually stunning science fiction thriller.",
+            "For a dose of nostalgia, consider 'Forrest Gump'  it's a journey through decades of American history.",
+            "Unwind with 'La La Land', a beautiful musical that will sweep you off your feet.",
+            "Delve into the world of magic with 'Harry Potter and the Sorcerer's Stone'. It's a fantastic adventure.",
+            "If you love animated films, 'Up' is a heartwarming and uplifting choice from Disney-Pixar.",
+            "Explore 'Eternal Sunshine of the Spotless Mind' for a unique and thought-provoking romantic film.",
+            "For a gripping action movie, check out 'The Dark Knight'. Heath Ledger's Joker is iconic.",
+            "Uncover the secrets of 'The Grand Budapest Hotel'  a quirky and visually stunning film by Wes Anderson.",
+            "If you enjoy documentaries, 'Won't You Be My Neighbor?' is a touching tribute to Mr. Rogers.",
+            "For an emotional rollercoaster, watch 'Schindler's List'  a powerful and heartbreaking historical drama.",
+            "Explore 'A Beautiful Mind' for a remarkable story of mathematics and perseverance.",
+            "Delve into the world of sci-fi with 'Blade Runner 2049'  a visually breathtaking film."
+        ],
+        "context": [""]
+        
+    },
+    {
+        "tag": "depressed",
+        "patterns": [
+            "I am feeling depressed",
+            "Feeling down",
+            "Depressed",
+            "Not doing well",
+            "I'm sad",
+            "Struggling with depression",
+            "Having a tough time",
+            "Feeling low",
+            "Emotionally overwhelmed",
+            "In a dark place",
+            "Can't shake off the sadness",
+            "I need help with depression"
+        ],
+        "responses": [
+            "I'm really sorry to hear that you're feeling this way. Are you okay?",
+            "I'm here for you. If you need someone to talk to, I'm here to listen.",
+            "Depression can be challenging. Have you considered booking an appointment with a doctor or therapist?",
+            "Taking the first step toward recovery is important. Would you like me to look for therapists near your location?",
+            "You don't have to go through this alone. It might help to talk to your parents about how you're feeling.",
+            "Remember, there are people who care about you. Don't hesitate to reach out to friends and family.",
+            "Please know that there's support available. You're not alone in this.",
+            "If you're comfortable with it, opening up to someone you trust can be a positive step in dealing with depression."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "hobbies",
+        "patterns": [
+            "I am feeling bored",
+            "Bored",
+            "Need a hobby",
+            "What can I do in my free time?",
+            "Suggest me some activities",
+            "I'm looking for a new hobby",
+            "Boredom strikes",
+            "Give me hobby ideas",
+            "How can I pass my time?",
+            "Hobbies in general",
+            "I need a pastime"
+        ],
+        "responses": [
+            "I can help with that! How about trying gardening? It's a relaxing and rewarding hobby.",
+            "Planting can be a great way to spend your free time. You'll enjoy watching your plants grow.",
+            "Writing is a wonderful creative outlet. You can start with a journal, stories, or even poetry.",
+            "Exploring new hobbies can be fun! You can consider painting, cooking, or learning a musical instrument.",
+            "If you're a fan of physical activity, try taking up a sport or going for a daily walk.",
+            "You can also try your hand at photography or pick up a craft like knitting or woodworking.",
+            "Hobbies are a fantastic way to beat boredom. How about trying cooking or DIY projects?",
+            "Exploring your interests can lead to fulfilling hobbies. What are you passionate about?",
+            "The possibilities are endless. Think about what excites you, and you'll find the perfect hobby!",
+            "Sometimes trying something new can be exciting. Don't hesitate to experiment with various activities."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "recommend_show",
+        "patterns": [
+            "Recommend a show",
+            "What TV show should I watch?",
+            "I need a new series to watch",
+            "Any show recommendations?",
+            "Suggest a TV series",
+            "Looking for something to binge-watch",
+            "Show me a good series"
+        ],
+        "responses": [
+            "I'd recommend watching 'Wednesday,' a captivating and mysterious show.",
+            "If you're into comedy, 'Brooklyn Nine-Nine' is a hilarious and light-hearted series.",
+            "Consider 'How I Met Your Mother' if you enjoy sitcoms with a touch of romance and humor.",
+            "'Friends' is a classic sitcom that's always a great choice for some laughter.",
+            "For a unique take on the afterlife, check out 'The Good Place.' It's clever and thought-provoking.",
+            "Do you prefer drama, comedy, or something else? It can help me give a more specific recommendation.",
+            "There are so many shows out there. If you have any genre preferences, let me know, and I can tailor my suggestion!",
+            "TV series can be a great way to unwind. Let me know what genre or theme you're in the mood for."
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "drama_show",
+        "patterns": [
+            "Drama shows",
+            "Recommend a drama series",
+            "I'm in the mood for drama",
+            "Suggest a serious show",
+            "Give me a dramatic series",
+            "Dramatic TV series",
+            "Drama, please",
+            "I prefer serious shows"
+        ],
+        "responses": [
+            "If you're into drama, 'Breaking Bad' is a gripping and intense series about a high school chemistry teacher turned methamphetamine manufacturer.",
+            "'The Crown' offers a compelling look at the reign of Queen Elizabeth II and the events that shaped the second half of the 20th century.",
+            "Consider 'Game of Thrones' for a complex and politically charged fantasy drama set in the Seven Kingdoms of Westeros.",
+            "'The Handmaid's Tale' is a thought-provoking dystopian drama that delves into themes of power and resistance.",
+            "If you're interested in legal drama, 'Suits' offers a mix of wit, charm, and legal maneuvering.",
+            "For a period drama, 'Downton Abbey' is a delightful exploration of an aristocratic family's life in early 20th-century England.",
+            "Let me know if you need more information about any of these drama series!"
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "comedy_show",
+        "patterns": [
+            "Comedy shows",
+            "Recommend a comedy series",
+            "I'm in the mood for humor",
+            "Suggest a funny show",
+            "Give me a comedy series",
+            "Comedy, please",
+            "I prefer funny shows"
+        ],
+        "responses": [
+            "If you're in the mood for comedy, 'The Office' is a mockumentary-style sitcom filled with quirky characters and hilarious workplace antics.",
+            "'Parks and Recreation' offers a delightful blend of humor and heart as it explores the inner workings of local government.",
+            "Consider 'Brooklyn Nine-Nine' for witty humor, lovable characters, and hilarious police precinct shenanigans.",
+            "'The Marvelous Mrs. Maisel' is a comedy-drama that follows the journey of a housewife turned stand-up comedian in the 1950s.",
+            "For a classic sitcom, 'Friends' is always a reliable choice for laughter and relatable moments.",
+            "If you're looking for animated comedy, 'The Simpsons' has been a long-standing favorite with its satirical humor and iconic characters.",
+            "Feel free to ask if you'd like more details about any of these comedy series!"
+        ],
+        "context": [""]
+    },
+    {
+        "tag": "google",
+        "patterns": [
+            "google",
+            "search",
+            "internet"
+        ],
+        "responses": [
+            "Redirecting to Google..."
+        ]
+    },
+    {
+        "tag": "time",
+        "patterns": ["What is time", "time", "samay","What's the time?", "Current time", "Tell me the time","Could you tell me the time?",
+        "Time, please.",
+        "Do you know the current time?",
+        "I need to know the time.",
+        "What's the time right now?",
+        "Can you give me the time?",
+        "Tell me the current time.",
+        "Time check.",
+        "What's the time at the moment?"],
+        "responses": ["time"]
+      },
+      {
+        "tag": "date",
+        "patterns": ["date", "what is the date today", "tareek", "What's today's date?","Tell me the date.","What's the current date?","What's the date today?","Can you give me today's date?","What is today's date, please?","I need to know the date.","Date check.","What's the date right now?","What's the date at the moment?"],
+        "responses": ["date"]
+      },
+      {
+        "tag": "weather",
+        "patterns": [
+            "temperature",
+            "weather",
+            "how hot is it"
+        ],
+        "responses": [
+            "..."
+        ]
+    },
+    {
+        "tag": "wikipedia",
+        "patterns": [
+            "who is","about","what is ", "wikipedia","tell me something about","top songs",
+            "best songs",
+            "hot songs",
+            " top 10 songs",
+            "top ten songs"
+        ],
+        "responses": [
+            "wikipedia"
+        ]
+    },
+    {
+        "tag": "play",
+        "patterns": [
+            "play *song",
+            "play *track",
+            "sing a song",
+            "play music"
+        ],
+        "responses": [
+            "play"
+        ]
+    },
+    {
+        "tag": "joke",
+        "patterns": [
+            "Tell me a joke",
+            "tell me something funny",
+            "joke",
+            "Make me laugh",
+            "I need a laugh",
+            "Give me a funny one",
+            "Tell me a humorous story",
+            "Share a joke with me",
+            "How about a joke?",
+            "Can you tell me something amusing?",
+            "Entertain me with a joke",
+            "Crack a joke",
+            "Make my day with humor"
+        ],
+        "responses": [
+            "Why did the scarecrow win an award? Because he was outstanding!",
+            "How do you organize a space party? You 'planet'!",
+            "Did you hear about the mathematician who's afraid of negative numbers? He will stop at nothing to avoid them!",
+            "Why don't scientists trust atoms? Because they make up everything!",
+            "What's orange and sounds like a parrot? A carrot!",
+            "Why was the math book sad? Because it had too many problems.",
+            "Why did the bicycle fall over? Because it was two-tired!",
+            "Why couldn't the leopard play hide and seek? Because he was always spotted!",
+            "What did one wall say to the other wall? I'll meet you at the corner!",
+            "Why don't skeletons fight each other? They don't have the guts!"
+        ]
+    }
+]
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="calendar">
+        <div class="calendar-header">
+            <div class="calendar-buttons">
+                <button id="prevMonth">Previous</button>
+                <h1 id="monthYear" class="clickable">October 2023</h1>
+                <button id="nextMonth">Next</button>
+            </div>
+            <input id="yearInput" type="number" min="1900" max="2100" step="1">
+            <button id="updateYear">Update</button>
+        </div>
+        <div class="calendar-body">
+            <!-- Calendar days will be generated dynamically using JavaScript -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

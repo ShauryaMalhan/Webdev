@@ -1,0 +1,348 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            #navbar {
+                display: flex;
+                justify-content: center;
+                padding: 20px; /* Increase the vertical padding */
+            }
+            body{
+                background-color: #4eacff;
+            }
+            .menu2 {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .menu2 menu {
+                display: flex;
+                list-style-type: none;
+            }
+            
+            .menu2 .nav {
+                background: linear-gradient(rgba(220, 220, 255, 0.4) 85%, rgba(255, 255, 255, 0.5) 100%);
+                cursor: pointer;
+                padding: 10px 20px; /* Increase the padding */
+                border-top: 2px solid rgba(200, 200, 255, 0.5);
+                border-bottom: 2px solid rgba(50, 50, 50, 0.4);
+                margin: 0;
+            }
+            
+            .menu2 .a {
+                display: block;
+                padding: 20px; /* Increase the padding */
+                font-size: 20px; /* Increase the font size */
+                text-decoration: none;
+                border-radius: 5px;
+                position: relative;
+                top: 0;
+                color: #FFF;
+                transition: all .4s;
+            }
+            
+            .menu2 .nav:hover .a {
+                top: -20px;
+                color: #4eacff;
+                background-color: #fff;
+                box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.7);
+                transition: all .4s;
+            }
+            
+            .menu2 .nav .a:after {
+                display: block;
+                content: '';
+                position: absolute;
+                top: 100%;
+                left: 42%;
+                border-style: solid;
+                border-color: transparent;
+                border-width: 5px 5px 0 5px;
+                transition: all .4s;
+            }
+            
+            .menu2 .nav:hover .a:after {
+                border-color: white transparent transparent transparent;
+                transition: all .4s;
+            }
+            
+            #Buttons {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px; /* Add margin to separate the navbar and buttons */
+            }
+            
+            .Button {
+                margin: 0 10px;
+            }
+            
+            .Button a {
+                display: block;
+                padding: 15px 30px; /* Increase the padding */
+                font-size: 18px; /* Increase the font size */
+                text-decoration: none;
+                background-color: #FFF;
+                color: #4eacff;
+                border-radius: 5px;
+                transition: background-color 0.4s, color 0.4s;
+            }
+            
+            .Button a:hover {
+                background-color: #4eacff;
+                color: #FFF;
+            }
+            
+            
+            /* Add this CSS to increase the size of the footer links */
+            .menu_link {
+                font-size: 1.5rem;
+                margin: 0 20px;
+            }
+            
+            .menu_link:hover {
+                opacity: 1;
+            }
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+        #foot {
+                position: fixed; /* Change to fixed for it to be at the bottom */
+                bottom: 0;
+                width: 100%;
+                margin-bottom: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+        
+        
+        
+        .footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        height: 85px;
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+        
+        .social-icon{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px ;
+            flex-wrap: wrap;
+            z-index: 1001;
+        }
+        .menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 100px;
+        flex-wrap: wrap;
+        }
+        
+        .social-icon__item,
+        .menu__item {
+        list-style: none;
+        }
+        
+        .social-icon__link {
+        font-size: 2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        }
+        .social-icon__link:hover {
+        transform: translateY(-10px);
+        }
+        
+        .menu__link {
+        font-size: 1.2rem;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        text-decoration: none;
+        opacity: 0.75;
+        font-weight: 300;
+        }
+        
+        .menu__link:hover {
+        opacity: 1;
+        }
+        
+        .footer p {
+        color: #fff;
+        margin: 15px 0 10px 0;
+        font-size: 1rem;
+        font-weight: 300;
+        }
+        
+        .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url("https://i.ibb.co/wQZVxxk/wave.png");
+        background-size: 1000px 100px;
+        transform: translate(0px, 20px);
+        }
+        
+        .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWaves 4s linear infinite;
+        }
+        
+        .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animate 4s linear infinite !important;
+        }
+        
+        .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWaves 3s linear infinite;
+        }
+        
+        .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animate 3s linear infinite;
+        }
+        
+        @keyframes animateWaves {
+        0% {
+            background-position-x: 1000px;
+        }
+        100% {
+            background-positon-x: 0px;
+        }
+        }
+        
+        @keyframes animate {
+        0% {
+            background-position-x: -1000px;
+        }
+        100% {
+            background-positon-x: 0px;
+        }
+        }
+        :root{
+            --primary: #B6FFFA;
+            --secondary: #7edbfc;
+            --gradient1: #80B3FF;
+            --gradient2: #4082e6;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: var(--gradient1);
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .button{
+        padding: 25px 30px;
+        background-color: #050801;
+        color: #03e9f4;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        letter-spacing: 4px;
+        overflow: hidden;
+        transition: 0.5s;
+        cursor: pointer;
+        }
+
+        .button:hover{
+            background: #03e9f4;
+            color: #050801;
+            box-shadow: 0 0 5px #03e9f4,
+                        0 0 25px #03e9f4,
+                        0 0 50px #03e9f4,
+                        0 0 200px #03e9f4;
+            -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+        }
+        .Button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px;
+            margin-top: 40px;
+        }
+        </style>
+    </head>
+    <body>
+    <div id="navbar">
+        <nav class="menu2">
+        <menu>
+            <li class="nav"><a class="a" href="#">home</a></li>
+            <li class="nav"><a class="a" href="#">about</a></li>
+            <li class="nav"><a class="a" href="#">contact</a></li>
+            <li class="nav"><a class="a" href="#">blog</a></li>
+        </menu>
+        </nav>
+    </div>
+    <div id = "Buttons">
+        <div class = "Button"><a class="button" href="Class6-9.html">Class 6-9</a></div>
+        <div class = "Button"><a class="button" href="Class10-12.html">Class 10-12</a></div>
+    </div>
+    <div id="foot">
+        <div class="footer">
+            <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+            </div>
+            <ul class="social-icon">
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                <ion-icon name="logo-linkedin"></ion-icon>
+                </a></li>
+            <li class="social-icon_item"><a class="social-icon_link" href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+                </a></li>
+            </ul>
+            <ul class="menu">
+            <li class="menu_item"><a class="menu_link" href="#">Home</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">About</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Services</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Team</a></li>
+            <li class="menu_item"><a class="menu_link" href="#">Contact</a></li>
+        
+            </ul>
+        
+        </footer>
+    </div>  
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+    </body>
+    </html>

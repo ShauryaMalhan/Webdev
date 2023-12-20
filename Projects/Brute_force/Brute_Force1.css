@@ -1,5 +1,6 @@
 body{
     background-color: #404041;
+
 }
 h1{
     padding-top: 10px;
@@ -97,5 +98,6 @@ hr{
     width: 100px;
 }
 .Boxes:hover{
+    color: black;
     transform: perspective(100px) translateZ(10px);
 }

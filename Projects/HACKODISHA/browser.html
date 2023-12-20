@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <ul id="list">
+
+    </ul>
+    <div class="boxes">
+        <div id="police"> this is box1 </div>
+        <div class="vertical-line"></div>
+        <div id="police"> this is box2 </div>
+    </div>  
+    <div class="notif">
+        <div id="notif">
+            <div id="notifbar">
+                <button id="create-box-button">Create Box</button>
+                <div id="box-container"></div>
+                <script src="notifbar.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+                <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+                <script id="MainScript">
+                    const firebaseConfig = {
+                        apiKey: "AIzaSyA9Dzm3uyxodcpccyI1cZzPsyUX3d08sFA",
+                        authDomain: "hackodisa.firebaseapp.com",
+                        projectId: "hackodisa",
+                        storageBucket: "hackodisa.appspot.com",
+                        messagingSenderId: "1014393366882",
+                        appId: "1:1014393366882:web:740f43d766e7b1071f643b",
+                        measurementId: "G-QMK39E6NY0"
+                    };
+                    firebase.initializeApp(firebaseConfig);
+                    var stdNo = 0;
+
+                    function addItemsToList(name, age, sex, car_num, password){
+                        var ul = document.getElementById('List');
+                        var header = document.createElement('h2');
+                        var name = document.createElement('li');
+                        var age = document.createElement('li');
+                        var car_num = document.createElement('li');
+                        var password = document.createElement('li');
+                        var sex = document.createElement('li');
+
+                        name.innerHTML = 'Name: ' + name;
+                        age.innerHTML = 'Age: ' + age;
+                        car_num.innerHTML = 'Car Number: ' + car_num;
+                        password.innerHTML = 'Password: ' + password;
+                        sex.innerHTML = 'Sex: ' + sex;
+
+                        ul.appendChild(header);
+
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

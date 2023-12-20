@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Frontend</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="chat-container">
+    <div id="chat-messages"></div>
+    <div id="user-input">
+        <input type="text" id="input-text" placeholder="Type your message...">
+        <button id="send-button" onclick="sendMessage()">Send</button>
+    </div>
+</div>
+
+<script>
+    function sendMessage() {
+        var userInput = document.getElementById('input-text').value;
+        displayMessage('user', userInput);
+        // Assuming you have a function to send the user input to your backend/API
+        // and receive a response
+        // Replace the following line with your actual API call
+        var botResponse = "This is a dummy response from the bot.";
+        displayMessage('bot', botResponse);
+        // Clear the input field
+        document.getElementById('input-text').value = '';
+    }
+
+    function displayMessage(sender, message) {
+        var chatMessages = document.getElementById('chat-messages');
+        var newMessage = document.createElement('div');
+        newMessage.className = sender;
+        newMessage.textContent = message;
+        chatMessages.appendChild(newMessage);
+        // Scroll to the bottom of the chat container to show the latest message
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+</script>
+
+</body>
+</html>
