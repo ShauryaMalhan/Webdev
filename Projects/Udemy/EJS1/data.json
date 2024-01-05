@@ -1,0 +1,56 @@
+{
+    "soccer" : {
+        "name" : "Soccer",
+        "subscriber" : "800000",
+        "posts" : [
+            {
+                "title" : "hey, how are you",
+                "author" : "John"
+            },
+            {
+                "title" : "hey, i am fine",
+                "author" : "swasti"
+            },
+            {
+                "title" : "hey, we are cool",
+                "author" : "shaurya"
+            }
+        ]
+    },
+    "chicken" : {
+        "name" : "Chicken",
+        "subscriber" : "8921213",
+        "posts" : [
+            {
+                "title" : "my crew is awesome",
+                "author" : "donald"
+            },
+            {
+                "title" : "my crew is awesome and we are also",
+                "author" : "donald duck"
+            },
+            {   
+                "title" : "i am a superman",
+                "author" : "ditti"
+            }
+        ]
+    },
+    "mightyharvester" : {
+        "name" : "mightyharvester",
+        "subscriber" : "43232",
+        "posts" : [
+            {
+                "title" : "why are you doing this?",
+                "author" : "frank"
+            },
+            {
+                "title" : "they dated you",
+                "author" : "aniket"
+            },
+            {
+                "title" : "my bae is the best person",
+                "author" : "aayush"
+            }
+        ]
+    }
+}

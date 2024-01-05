@@ -6,6 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Browsing the <%= subreddit %> subreddit</h1>
+    <h1>Browsing the <%= data.name %> subreddit</h1>
+    <h2><%= data.subscriber %></h2>
+    <% for(let posts of data.posts) { %>
+        <article>
+            <h3><%= posts.title %> - <b><%= posts.author %></b></h3>
+        </article>
+    <% } %>
 </body>
 </html>
