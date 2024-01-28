@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const app = express();
+const AppError = require('./AppError');
 
 app.use(morgan('common'));
 app.use((req, res, next) => {
@@ -9,12 +10,19 @@ app.use((req, res, next) => {
     return next();
 })
 
+// app.use((err, req, res, next) => {
+//     console.log("*************************************")
+//     console.log("**************Error******************")
+//     console.log("*************************************")
+//     res.status(500).send("Oh we got an error")
+// })
+
 const verifyPassword = (req, res, next) => {
     const { password } = req.query;
     if(password === 'swasti'){
         next();
     }
-    throw new Error('Password required!!');
+    throw new AppError('Password required!!', 401);
 };
 
 app.use('/dogs' ,(req, res, next) => {
@@ -33,7 +41,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/secrets', verifyPassword, (req, res) => {
-    res.send('Home page');
+    res.send('Swasti is my Future Wife');
 });
 
 app.get('/dogs', (req, res) => {
@@ -48,6 +56,11 @@ app.get('/error', (req, res) => {
 app.use((req, res, next) => {
     res.status(404).send('Not Found');
 });
+
+app.use((req, res, next) => {
+    const { status = 500, message = 'Something Went Wrong'} = err;
+    res.status(status).send(message);
+})
 
 app.listen(3000, () => {
     console.log('listening on Port 3000');
